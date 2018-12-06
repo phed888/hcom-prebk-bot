@@ -5,7 +5,13 @@ class C3Body extends Component {
   render() {
     const spreadList = this.props.conversation.map(message => (
       <li className="messageBubble">
-        <C3Chat message={message} />
+        <C3Chat
+          avatar=""
+          agent={message.agent}
+          photo={message.photo}
+          message={message.message}
+          buttons=""
+        />
       </li>
     ));
     return (

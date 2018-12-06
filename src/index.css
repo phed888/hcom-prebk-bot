@@ -302,8 +302,9 @@ body {
 .c3body {
   box-sizing: border-box;
   height: 525px;
-  padding: 0 20px 0 52px;
-  overflow: hidden;
+  padding: 0 20px 0 10px;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .c3footer {
   display: flex;

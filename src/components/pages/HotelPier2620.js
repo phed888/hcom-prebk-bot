@@ -16,19 +16,30 @@ class HotelPier2620 extends Component {
 
   // Display the search question and its answer
 
-  askQuestion = searchString => {
-    this.addToConversation(searchString);
-    this.answerQuestion(searchString);
+  askQuestion = questionObject => {
+    console.log(questionObject);
+    this.addToConversation(questionObject);
+    this.answerQuestion(questionObject);
   };
 
-  answerQuestion = searchString => {
+  answerQuestion = questionObject => {
     setTimeout(() => {
-      if (searchString.includes('pool' || 'swimming' || 'wading')) {
-        this.addToConversation('Yes, there is a pool!');
+      if (questionObject.message.includes('pool' || 'swimming' || 'wading')) {
+        this.addToConversation({
+          avatar: 'hotels',
+          agent: true,
+          photo: 'pool-photo',
+          message: 'Yes, there is a pool!',
+          buttons: ''
+        });
       } else {
-        this.addToConversation(
-          "Sorry, I don't understand. Ask me about the pool instead"
-        );
+        this.addToConversation({
+          avatar: 'hotels',
+          agent: true,
+          photo: '',
+          message: "Sorry, I don't understand. Ask me about the pool instead",
+          buttons: ''
+        });
       }
     }, 1500);
   };

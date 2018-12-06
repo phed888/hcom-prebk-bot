@@ -217,7 +217,7 @@ body {
   background-color: transparent;
   width: 405px;
   height: 30px;
-  padding: 3px;
+  padding: 3px 3px 3px 10px;
 }
 .search-container .amenity-submit {
   border: none;
@@ -260,6 +260,33 @@ body {
 .c3container.is-docked {
   transform: translateY(598px);
 }
+.header-container {
+  padding: 20px;
+  display: flex;
+}
+.header-container.hcom {
+  background-color: #f8f9fa;
+}
+.hcom-avatar {
+  height: 47px;
+  width: 53px;
+  background-image: url('./assets/hcom-gary.png');
+  margin-right: 20px;
+}
+.welcome-text > p {
+  padding: 0;
+  margin: 0;
+}
+.welcome-text > title {
+  font-size: 19px;
+  color: #222222;
+}
+.welcome-text > .subtitle {
+  font-size: 14px;
+  line-height: 20px;
+  color: #787f8c;
+}
+
 .c3header {
   position: relative;
   height: 40px;
@@ -320,6 +347,7 @@ body {
 .chat-messages {
   display: flex;
   flex-direction: column;
+  margin: 0;
 }
 .messageBubble {
   display: block;

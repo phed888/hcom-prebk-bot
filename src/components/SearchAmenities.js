@@ -5,18 +5,30 @@ class SearchAmenities extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      inputText: null
+      inputText: {
+        avatar: '',
+        agent: true,
+        photo: '',
+        message: '',
+        buttons: ''
+      }
     };
   }
 
+  // initiated by clicking on the 'search' button or hitting enter
   submitString = event => {
     event.preventDefault();
-    this.props.pageInput(this.state.inputText);
-    this.setState({ inputText: '' });
+    // conditional to prevent search without a search term
+    if (this.state.inputText.message !== '') {
+      this.props.pageInput(this.state.inputText);
+    }
+    // delete the text from the search box
+    this.setState({ inputText: { message: '' } });
   };
 
+  // updates the state as the customer types
   updateInput = event => {
-    this.setState({ inputText: event.target.value });
+    this.setState({ inputText: { message: event.target.value } });
   };
 
   render() {
@@ -27,7 +39,7 @@ class SearchAmenities extends Component {
           <input
             type="text"
             onChange={this.updateInput}
-            value={this.state.inputText}
+            value={this.state.inputText.message}
           />
           <SearchButton />
         </div>

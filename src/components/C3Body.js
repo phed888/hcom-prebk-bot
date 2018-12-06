@@ -17,22 +17,6 @@ class C3Body extends Component {
     return (
       <div className="c3body">
         <ul className="chat-messages">{spreadList}</ul>
-        {/* <C3Chat agent="" photo="" message={this.props.firstMessage} />
-        <C3Chat
-          agent="false"
-          photo="pool-photo"
-          message={[
-            <div>
-              "Here's what Pier 2620 Hotel Fisherman's Warf, San Francisco says
-              about the pool:"
-              <ul>
-                <li>
-                  <strong>Roof-top pool and sundeck</strong>
-                </li>
-              </ul>
-            </div>
-          ]}
-        /> */}
       </div>
     );
   }

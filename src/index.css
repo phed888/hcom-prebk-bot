@@ -1,14 +1,397 @@
 body {
+  background-color: #fff;
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.hcom-header {
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  position: relative;
+}
+.language-currency {
+  background-image: url('assets/language_currency.png');
+  width: 118px;
+  height: 28px;
+  margin-top: -32px;
+}
+.global-rightside {
+  background-image: url('assets/globalHeader-rightSide.png');
+  width: 116px;
+  height: 37px;
+}
+.subNav-rightSide {
+  background-image: url('assets/subNav-rightSide.png');
+  width: 367px;
+  height: 32px;
+}
+.global-header,
+.sub-header,
+.search-header-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+.global-header {
+  background-color: #d32f2f;
+}
+.sub-header {
+  background-color: #333;
+}
+.search-header-container {
+  background-color: #eae8e0;
+}
+.global-nav,
+.global-nav2,
+.sub-nav,
+.sub-nav2,
+.search-header,
+.page-sizing {
+  width: 1160px;
+  margin: 0 auto;
+}
+.global-nav {
+  height: 59px;
+  background-image: url(../src/assets/nav.png);
+}
+.global-nav2 {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+}
+.global-nav2 svg {
+  transform: scale(2) translateX(30px);
+}
+.nav-list {
+  display: flex;
+  justify-content: flex-end;
+}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.globalNav-listItem {
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+.sub-nav {
+  height: 32px;
+  background-image: url(../src/assets/subnav.png);
+}
+.sub-nav2 {
+  background-color: #333333;
+  height: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+}
+.sub-nav2 .subNav-listItem {
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+.search-header {
+  height: 106px;
+  background-image: url(../src/assets/search-header.png);
+}
+.hero-image {
+  background-image: url('assets/HCOMHeroImage.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 423px;
+  width: 100%;
+}
+.page-sizing {
+  display: flex;
+  align-items: center;
+  height: 423px;
+}
+.search-box {
+  background-image: url('assets/homepage-search.png');
+  height: 373px;
+  width: 359px;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+.button-primary {
+  position: absolute;
+  background-color: #156bc1;
+  font-size: 22px;
+  font-weight: bold;
+  border: 1px solid #156bc1;
+  border-radius: 2px;
+  box-shadow: inset 0 -2px 0 #063665;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 1.5;
+  overflow: hidden;
+  padding: 4px 16px;
+  top: 319px;
+  right: 16px;
+}
+.button-primary:hover {
+  background-color: #063665;
+}
+.button-invisible {
+  position: absolute;
+  height: 40px;
+}
+.button-invisible.marriottHotel {
+  top: 443px;
+  left: 260px;
+  width: 280px;
+}
+.button-invisible.pier2620Hotel {
+  top: 150px;
+  left: 260px;
+  width: 240px;
+}
+.button-invisible.searchResults {
+  width: 170px;
+  height: 45px;
+}
+.homepage-ads {
+  background-image: url('assets/HCOMHomeAds.png');
+  width: 1160px;
+  height: 1070px;
+  margin: 0 auto;
+}
+.search-results-body {
+  position: relative;
+  background-image: url('assets/HCOMSearchResults.png');
+  height: 2239px;
+  width: 1160px;
+  margin: 0 auto;
+}
+.pier2620-pdp {
+  position: relative;
+  background-image: url('assets/HCOMPier1260.png');
+  width: 1160px;
+  height: 1762px;
+  margin: 0 auto;
+}
+.marriott-pdp {
+  position: relative;
+  background-image: url('assets/HCOMMarriott.png');
+  width: 1160px;
+  height: 1750px;
+  margin: 0 auto;
+}
+.searchAmenities {
+  position: absolute;
+  top: 1340px;
+  left: 33px;
+}
+.searchAmenities > label {
+  font-size: 14px;
+  font-weight: bold;
+}
+.search-container {
+  display: flex;
+  margin-top: 9px;
+  background-color: #ffffff;
+  width: 450px;
+  height: 30px;
+  border: 1px solid #8e8e8e;
+  border-radius: 4px;
+}
+.search-container > input {
+  box-sizing: border-box;
+  font-size: 14px;
+  border: none;
+  background-color: transparent;
+  width: 405px;
+  height: 30px;
+  padding: 3px;
+}
+.search-container .amenity-submit {
+  border: none;
+  color: red;
+  /* background-image: url('assets/icon-search-button.png'); */
+  background-color: transparent;
+  /* opacity: 0.19; */
+  cursor: pointer;
+  height: 30px;
+  width: 45px;
+  transition: opacity 0.3s ease;
+}
+.amenity-submit:hover > svg {
+  /* opacity: 0.81; */
+  fill: blue;
+}
+.amenity-submit > svg {
+  transform: scale(0.75) translateY(1px) translateX(5px);
+  fill: #146bc0;
+}
+.c3container {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 408px;
+  height: 638px;
+  top: calc(100vh - 638px);
+  right: calc((100vw - 1160px - 16px) / 2);
+  background-color: #ffffff;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.33);
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(658px);
+}
+.c3container.is-visible {
+  transform: translateY(0);
+}
+.c3container.is-docked {
+  transform: translateY(598px);
+}
+.c3header {
+  position: relative;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d42926;
+  color: #ffffff;
+}
+.c3title {
+  width: 100%;
+  text-align: center;
+}
+.c3close {
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  right: 8px;
+  background-image: url('assets/icon-close.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+.c3close:hover {
+  opacity: 1;
+}
+.c3more {
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  right: 32px;
+  background-image: url('assets/icon-more.png');
+  background-repeat: no-repeat;
+  background-position: 4px 15px;
+  cursor: pointer;
+}
+.c3body {
+  box-sizing: border-box;
+  height: 525px;
+  padding: 0 20px 0 52px;
+  overflow: hidden;
+}
+.c3footer {
+  display: flex;
+  justify-content: space-between;
+  height: 72px;
+  border-top: 1px solid #cccccc;
+}
+.c3footer .typeMessage {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.chat-messages {
+  display: flex;
+  flex-direction: column;
+}
+.messageBubble {
+  display: block;
+}
+.messageInput {
+  width: 80%;
+  padding: 10px;
+  margin-left: 6px;
+  border: none;
+  background-color: transparent;
+  font-size: 14px;
+}
+.messageSubmit {
+  width: 20%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #cccccc;
+}
+.messageSubmit:hover {
+  color: #222222;
+}
+.chat-container {
+  position: relative;
+  max-width: 252px;
+  border: 1px solid #dbdbe0;
+  border-radius: 8px 8px 0 8px;
+  margin-top: 16px;
+  float: right;
+}
+.chat-container.agent {
+  border-radius: 8px 8px 8px 0;
+  float: left;
+}
+.chat-avatar {
+  position: absolute;
+  bottom: 0;
+  right: -32px;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background-image: url('assets/customer-avatar.png');
+  display: none;
+}
+.chat-container.agent .chat-avatar {
+  display: block;
+  left: -32px;
+  right: auto;
+  background-image: url('assets/avatar-hcom.png');
+}
+.chat-photo {
+  display: none;
+  width: 252px;
+  height: 252px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px 8px 0 0;
+}
+.chat-photo.pool-photo {
+  display: block;
+  background-image: url('assets/pool-photo.jpg');
+}
+.chat-message {
+  padding: 16px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #00001e;
+}
+.chat-message > ul {
+  padding: inherit;
+  margin: 0;
+}
+.chat-buttons {
+  display: none;
 }

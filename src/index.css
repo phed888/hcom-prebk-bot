@@ -391,6 +391,11 @@ body {
   border-radius: 8px 8px 8px 0;
   float: left;
 }
+.chat-all {
+  /* display: flex;
+  flex-direction: column; */
+  width: 320px;
+}
 .chat-avatar {
   position: absolute;
   bottom: 0;
@@ -434,7 +439,25 @@ body {
   margin: 0;
 }
 .chat-buttons {
-  display: none;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  width: inherit;
+}
+.chat-buttons .chat-button {
+  display: flex;
+  align-items: center;
+  height: 44px;
+  border: 2px solid blue;
+  padding: 0 16px;
+  border-radius: 24px;
+  font-size: 14px;
+  color: #222222;
+  white-space: nowrap;
+  cursor: pointer;
+  text-indent: 0;
+  margin: 8px 8px 0 0;
 }
 .name-date {
   display: flex;

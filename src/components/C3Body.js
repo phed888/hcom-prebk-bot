@@ -25,7 +25,7 @@ class C3Body extends Component {
           agent={message.agent}
           photo={message.photo}
           message={message.message}
-          buttons=""
+          buttons={message.buttons}
         />
       </li>
     ));

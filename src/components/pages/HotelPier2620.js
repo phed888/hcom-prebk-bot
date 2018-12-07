@@ -17,7 +17,6 @@ class HotelPier2620 extends Component {
   // Display the search question and its answer
 
   askQuestion = questionObject => {
-    console.log(questionObject);
     this.addToConversation(questionObject);
     this.answerQuestion(questionObject);
   };
@@ -42,7 +41,14 @@ class HotelPier2620 extends Component {
               </ul>
             </>
           ),
-          buttons: ''
+          buttons: []
+        });
+        this.addToConversation({
+          avatar: 'hotels',
+          agent: true,
+          photo: '',
+          message: 'Can I help you with anything else?',
+          buttons: ["Nope, that's it.", 'View amenities', 'Message agent']
         });
       } else {
         this.addToConversation({
@@ -50,7 +56,7 @@ class HotelPier2620 extends Component {
           agent: true,
           photo: '',
           message: "Sorry, I don't understand. Ask me about the pool instead",
-          buttons: ''
+          buttons: []
         });
       }
     }, 1500);

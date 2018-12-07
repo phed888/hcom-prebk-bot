@@ -6,9 +6,9 @@ class C3HeaderHcom extends Component {
       <div className="header-container hcom">
         <div className="hcom-avatar" />
         <div className="welcome-text">
-          <p className="title">Hotels.com</p>
+          <p className="title">Hi there,</p>
           <p className="subtitle">
-            Hi there. I'm the Hotels.com Help Bot here to assist you.
+            I'm the Hotels.com help bot here to assist you.
           </p>
         </div>
       </div>

@@ -33,13 +33,14 @@ class SearchAmenities extends Component {
 
   render() {
     return (
-      <form className="searchAmenities" onSubmit={this.submitString}>
+      <form className={this.props.className} onSubmit={this.submitString}>
         <label htmlFor="amenity-search">Search amenities</label>
         <div className="search-container">
           <input
             type="text"
             onChange={this.updateInput}
             value={this.state.inputText.message}
+            placeholder={this.props.placeHolder}
           />
           <SearchButton />
         </div>

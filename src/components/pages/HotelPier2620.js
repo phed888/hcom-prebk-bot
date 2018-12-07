@@ -29,7 +29,19 @@ class HotelPier2620 extends Component {
           avatar: 'hotels',
           agent: true,
           photo: 'pool-photo',
-          message: 'Yes, there is a pool!',
+          message: (
+            <>
+              <p style={{ margin: 0 }}>
+                Here's what Hotel Pier 2660 Fisherman's Warf has to say about
+                pool options:
+              </p>
+              <ul>
+                <li style={{ padding: 0 }}>
+                  <strong>Outdoor pool</strong>
+                </li>
+              </ul>
+            </>
+          ),
           buttons: ''
         });
       } else {
@@ -68,6 +80,7 @@ class HotelPier2620 extends Component {
     this.setState(prevState => ({
       c3visible: !prevState.c3visible
     }));
+    // clear the conversation when you close c3
     this.setState(prevState => ({
       conversation: []
     }));
@@ -88,7 +101,11 @@ class HotelPier2620 extends Component {
             to="/search-results"
             class="button-invisible searchResults"
           />
-          <SearchAmenities pageInput={this.askQuestion} />
+          <SearchAmenities
+            pageInput={this.askQuestion}
+            className="searchAmenities pdp"
+            placeHolder="Ask an amenities question"
+          />
           <C3Component
             visibility={this.state.c3visible}
             dockedness={this.state.c3docked}
@@ -96,6 +113,7 @@ class HotelPier2620 extends Component {
             c3Input={this.askQuestion}
             closeC3={this.closeC3}
             conversation={this.state.conversation}
+            pageInput={this.askQuestion}
           />
         </div>
       </div>

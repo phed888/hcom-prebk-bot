@@ -192,16 +192,20 @@ body {
   height: 1750px;
   margin: 0 auto;
 }
-.searchAmenities {
+.searchAmenities.pdp {
   position: absolute;
   top: 1340px;
   left: 33px;
 }
 .searchAmenities > label {
+  display: none;
+}
+.searchAmenities.pdp > label {
+  display: block;
   font-size: 14px;
   font-weight: bold;
 }
-.search-container {
+.searchAmenities.pdp .search-container {
   display: flex;
   margin-top: 9px;
   background-color: #ffffff;
@@ -215,23 +219,19 @@ body {
   font-size: 14px;
   border: none;
   background-color: transparent;
-  width: 405px;
+  width: 90%;
   height: 30px;
   padding: 3px 3px 3px 10px;
 }
 .search-container .amenity-submit {
   border: none;
-  color: red;
-  /* background-image: url('assets/icon-search-button.png'); */
   background-color: transparent;
-  /* opacity: 0.19; */
   cursor: pointer;
   height: 30px;
-  width: 45px;
+  width: 10%;
   transition: opacity 0.3s ease;
 }
 .amenity-submit:hover > svg {
-  /* opacity: 0.81; */
   fill: blue;
 }
 .amenity-submit > svg {
@@ -269,7 +269,7 @@ body {
 }
 .hcom-avatar {
   height: 47px;
-  width: 53px;
+  width: 46px;
   background-image: url('./assets/hcom-gary.png');
   margin-right: 20px;
 }
@@ -302,16 +302,19 @@ body {
   text-align: center;
 }
 .c3close {
-  height: 24px;
-  width: 24px;
-  position: absolute;
-  right: 8px;
-  background-image: url('assets/icon-close.png');
+  height: 18px;
+  width: 18px;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-attachment: local;
+  background-origin: content-box;
+  opacity: 0.5;
   cursor: pointer;
-  opacity: 0.6;
+  margin-right: 12px;
   transition: opacity 0.3s ease;
+}
+.c3close svg {
+  color: #ffffff;
 }
 .c3close:hover {
   opacity: 1;
@@ -328,15 +331,16 @@ body {
 }
 .c3body {
   box-sizing: border-box;
-  height: 525px;
-  padding: 0 20px 0 10px;
   overflow-x: hidden;
   overflow-y: auto;
+  flex-grow: 20;
+  max-height: 552px;
 }
-.c3footer {
+.c3footer .search-container {
   display: flex;
+  height: 46px;
   justify-content: space-between;
-  height: 72px;
+  align-items: center;
   border-top: 1px solid #cccccc;
 }
 .c3footer .typeMessage {
@@ -348,6 +352,10 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0;
+  padding: 0 20px 0 52px;
+}
+.chat-messages-end {
+  background-color: pink;
 }
 .messageBubble {
   display: block;
@@ -376,7 +384,7 @@ body {
   max-width: 252px;
   border: 1px solid #dbdbe0;
   border-radius: 8px 8px 0 8px;
-  margin-top: 16px;
+  margin: 16px 0 24px;
   float: right;
 }
 .chat-container.agent {
@@ -402,14 +410,18 @@ body {
 .chat-photo {
   display: none;
   width: 252px;
-  height: 252px;
+  height: 137px;
   background-size: cover;
   background-position: center;
   border-radius: 8px 8px 0 0;
 }
 .chat-photo.pool-photo {
   display: block;
-  background-image: url('assets/pool-photo.jpg');
+  background-image: url('assets/pool-1.jpg');
+}
+.chat-photo.pool-photo2 {
+  display: block;
+  background-image: url('assets/pool-2.jpg');
 }
 .chat-message {
   padding: 16px;
@@ -423,4 +435,27 @@ body {
 }
 .chat-buttons {
   display: none;
+}
+.name-date {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+  font-size: 12px;
+  color: #666679;
+  white-space: nowrap;
+  float: right;
+}
+.chat-container.agent .name-date {
+  right: auto;
+  left: 0;
+}
+.chat-container.agent .name-date .message-name::before {
+  content: 'Virtual agent';
+  font-weight: bold;
+}
+.message-name {
+  margin-right: 8px;
 }

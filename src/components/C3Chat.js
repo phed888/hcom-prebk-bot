@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import moment from 'moment';
 
 class C3Chat extends Component {
   render() {
@@ -14,6 +15,10 @@ class C3Chat extends Component {
         />
         <div className="chat-message">{this.props.message}</div>
         <ul className="chat-buttons" />
+        <div className="name-date">
+          <div className="message-name"> </div>
+          <div className="message-date">{moment().calendar()}</div>
+        </div>
       </div>
     );
   }

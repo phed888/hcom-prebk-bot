@@ -24,7 +24,7 @@ class C3Body extends Component {
           avatar=""
           agent={message.agent}
           photo={message.photo}
-          message={message.message}
+          message={message.content}
           buttons={message.buttons}
         />
       </li>

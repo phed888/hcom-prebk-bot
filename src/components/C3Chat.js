@@ -4,14 +4,18 @@ import moment from 'moment';
 class C3Chat extends Component {
   buttonArray = () => {
     if (this.props.buttons) {
-      console.log('inside of props.buttons');
       const buttons = this.props.buttons.map((button, index) => (
-        <li className="chat-button" key={index}>
-          {button}
+        <li className="chat-button" key={index} onClick={this.quickReply}>
+          {button.title}
         </li>
       ));
       return buttons;
     }
+  };
+
+  quickReply = event => {
+    // event.preventDefault;
+    console.log('clicked');
   };
   render() {
     return (
@@ -24,9 +28,7 @@ class C3Chat extends Component {
           <div className="chat-avatar" />
           <div
             className={
-              this.props.photo
-                ? 'chat-photo ' + this.props.photo
-                : 'chat-photo '
+              this.props.photo ? 'chat-photo ' + this.props.photo : 'chat-photo'
             }
           />
           <div className="chat-message">{this.props.message}</div>

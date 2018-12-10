@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import HCOMLogo from './HCOMLogo';
+import ButtonInvisible from '../ButtonInvisible';
 
 class HCOMHeader extends Component {
   constructor(props) {
@@ -20,6 +21,7 @@ class HCOMHeader extends Component {
   render() {
     return (
       <div className="hcom-header">
+        <ButtonInvisible to="/" class="button-invisible home" />
         <div className="global-header">
           <ul className="global-nav2">
             <HCOMLogo />

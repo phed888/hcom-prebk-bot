@@ -1,0 +1,26 @@
+{
+  "conversation": [
+    {
+      "index": 0,
+      "attached": false,
+      "avatar": true,
+      "agent": true,
+      "photo": "",
+      "content": "<p>Here's what Hotel Pier 2660 Fisherman's Warf says about pool options:</p><ul><li>Outdoor pool</li></ul>",
+      "buttons": []
+    },
+    {
+      "index": 1,
+      "attached": false,
+      "avatar": true,
+      "agent": true,
+      "photo": "",
+      "content": "Are there any other amenities questions I can help you with?",
+      "buttons": [
+        { "title": "Nope, that's it.", "action": 1 },
+        { "title": "View amenities", "action": 2 },
+        { "title": "Message agent", "action": 3 }
+      ]
+    }
+  ]
+}

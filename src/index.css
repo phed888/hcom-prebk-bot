@@ -150,6 +150,7 @@ body {
 .button-invisible {
   position: absolute;
   height: 40px;
+  cursor: pointer;
 }
 .button-invisible.marriottHotel {
   top: 443px;
@@ -164,6 +165,12 @@ body {
 .button-invisible.searchResults {
   width: 170px;
   height: 45px;
+}
+.button-invisible.home {
+  width: 300px;
+  height: 60px;
+  top: 0;
+  left: 0;
 }
 .homepage-ads {
   background-image: url('assets/HCOMHomeAds.png');
@@ -265,7 +272,7 @@ body {
   display: flex;
 }
 .header-container.hcom {
-  background-color: #f8f9fa;
+  background-color: #e6e6e6;
 }
 .hcom-avatar {
   height: 47px;
@@ -279,12 +286,12 @@ body {
 }
 .welcome-text > title {
   font-size: 19px;
-  color: #222222;
+  color: #333333;
 }
 .welcome-text > .subtitle {
   font-size: 14px;
   line-height: 20px;
-  color: #787f8c;
+  color: #525252;
 }
 
 .c3header {
